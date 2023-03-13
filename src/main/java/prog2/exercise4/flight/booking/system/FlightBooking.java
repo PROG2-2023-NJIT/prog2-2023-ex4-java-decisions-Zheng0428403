@@ -26,7 +26,7 @@ public class FlightBooking {
         FIRST,BUSINESS,ECONOMY
     }
     enum TripType{
-        ONEWAY,RETURN
+        ONE_WAY,RETURN
     }
     enum TripSource{
         NANJING, BEIJING, SHANGHAI, OULU, HELSINKI, PARIS
@@ -117,7 +117,7 @@ public class FlightBooking {
     
     public void setTripType(String w){
         if(w.equals("1")){
-            this.tripType = TripType.ONEWAY;
+            this.tripType = TripType.ONE_WAY;
           }
         if(w.equals("2")){
             this.tripType = TripType.RETURN;
