@@ -15,8 +15,8 @@ public class FlightBooking {
     public int childPassengers;
     public int adultPassengers;
     public int totalPassengers;
-    public int departingTicketPrice;
-    public int returnTicketPrice;
+    public double departingTicketPrice;
+    public double returnTicketPrice;
     public double totalTicketPrice;
     public String ticketNumber = "12345";
     public BookingClass bookingClass;
@@ -56,8 +56,7 @@ public class FlightBooking {
         return this.passengerFullName;}
     public SourceAirport getSourceAirport(){
         return this.sourceAirport;}
-    public TripDestination getTripDestination(){
-        return this.tripDestination;}
+    
     public DestinationAirport getDestinationAirport(){
         return this.destinationAirport;}
     
@@ -72,16 +71,17 @@ public class FlightBooking {
     }    
     public double getDepartingTicketPrice(){
         return this.departingTicketPrice;}
+    public void setDepartingTicketPrice(double childPassengers, double adultPassengers){
+        this.departingTicketPrice = departingTicketPrice;
+    }
     public double getReturnTicketPrice(){
-        return returnTicketPrice;
-    }    
-    public double getTotalTicketPrice(){
-        return this.totalTicketPrice;}
-    public void setTotalTicketPrice(double departingTicketPrice, double returnTicketPrice){
-        this.totalTicketPrice = (departingTicketPrice + returnTicketPrice)*totalPassengers;
-    }    
-    public String getTicketNumber(){
-        return this.ticketNumber;}
+        return this.returnTicketPrice;
+    } 
+    public void setReturnTicketPrice(){
+        this.returnTicketPrice = returnTicketPrice;
+    }  
+       
+    
     public String toString(){
         return "Dear " + passengerFullName + ". Thank you for booking your flight with " + 
         flightCompany + ". Following are the details of your booking and the trip:" + "\n" + 
@@ -124,6 +124,9 @@ public class FlightBooking {
     }
         
 }
+    
+    
+
     public TripSource getTripSource(){
          return this.tripSource;
     }
@@ -142,9 +145,8 @@ public class FlightBooking {
         }
     }
 
-    public TripDestination getTripDestination(String f){
-        return this.tripDestination;
-   }
+    public TripDestination getTripDestination(){
+        return this.tripDestination;}
    public void setTripDestination(String f){
        if(f.equals("1")){
            this.tripDestination = TripDestination.NANJING;
@@ -159,6 +161,9 @@ public class FlightBooking {
            this.tripDestination = TripDestination.HELSINKI;
        }
    }
+   public void setTripDestination(TripSource tripSource,TripDestination tripDestination) {
+    this.tripDestination = tripDestination;
+}
 
 
 public LocalDate getDepartureDate(){
@@ -187,7 +192,69 @@ public void setReturnDate(LocalDate returnDate){
 
 
 }
-        
+
+public String getTicketNumber(){
+    return this.ticketNumber;}
+public void setTicketNumber(){
+    if (tripType.equals("1")){
+        this.ticketNumber = "11########";
+        if(bookingClass.equals("1")){
+            this.ticketNumber = "11F#######";
+        }
+        if(bookingClass.equals("2")){
+            this.ticketNumber = "11B#######";
+        }
+        if(bookingClass.equals("3")){
+            this.ticketNumber = "11E#######";
+        }
+    }
+    if (tripType.equals("2")){
+        this.ticketNumber = "22########";
+        if(bookingClass.equals("1")){
+            this.ticketNumber = "22F#######";
+        }
+        if(bookingClass.equals("2")){
+            this.ticketNumber = "22B#######";
+        }
+        if(bookingClass.equals("3")){
+            this.ticketNumber = "22E#######";
+        }
+    }
+
+
+
+
+
+    }
+    public double getTotalTicketPrice(){
+        return this.totalTicketPrice;}
+    public void setTotalTicketPrice(){
+        if(){
+            this.totalTicketPrice = 300 + 300*0.1 +300*0.05;
+            if(bookingClass.equals("1")){
+                this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 250;  
+            }
+            if(bookingClass.equals("2")){
+                this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 150;
+        }
+        if(bookingClass.equals("3")){
+            this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 50;
+    }  
+    }
+    if(){
+        this.totalTicketPrice = 300 + 300*0.15 +300*0.1;
+        if(bookingClass.equals("1")){
+            this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 250;  
+        }
+        if(bookingClass.equals("2")){
+            this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 150;
+    }
+    if(bookingClass.equals("3")){
+        this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 50;
+} 
+    }     
+  
+    }
     
 }
 

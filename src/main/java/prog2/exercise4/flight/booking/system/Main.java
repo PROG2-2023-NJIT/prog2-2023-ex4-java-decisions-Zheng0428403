@@ -90,6 +90,7 @@ public class Main
         case 4 : ff = "4"; fb.setTripDestination(ff);break;
     }
     
+    
     Scanner i = new Scanner(System.in);
     System.out.println("出发时间：");
     String departingDate = i.nextLine();
@@ -107,18 +108,27 @@ public class Main
     fb.setReturnDate(rf);
     fb.getReturnDate();
 
+    Scanner k = new Scanner(System.in);
+    System.out.println("票号是什么：");
+    String ticketNumber = k.nextLine();
+    fb.setTicketNumber();
+    fb.getTicketNumber();
+
+    Scanner l = new Scanner(System.in);
+    System.out.println("总票价为：");
+    String totalTicketPrice = k.nextLine();
+    fb.getTotalTicketPrice();
+    fb.setTotalTicketPrice();
 
     
    
     String company = fb.getFlightCompany();
-    String ticketNumber = fb.getTicketNumber();
     TripSource TripSource = fb.getTripSource();
     TripDestination TripDestination = fb.getTripDestination(); 
    
     fb.setTotalPassengers(1, 3);
     int totalPassengers = fb.getTotalPassengers();
-    fb.setTotalTicketPrice(700, 800);
-    double totalTicketPrice = fb.getTotalTicketPrice();
+    
     System.out.println("Dear " + passengerFullName + ". Thank you for booking your flight with " + 
     company + ". Following are the details of your booking and the trip:" + "\n" + 
     "Ticket Number: " + ticketNumber + "\n" + 
@@ -134,7 +144,8 @@ public class Main
     e.close();
     i.close();
     j.close();
-
+    k.close();
+    l.close();
 
 }
 }
