@@ -72,13 +72,13 @@ public class FlightBooking {
     public double getDepartingTicketPrice(){
         return this.departingTicketPrice;}
     public void setDepartingTicketPrice(double childPassengers, double adultPassengers){
-        this.departingTicketPrice = departingTicketPrice;
+        
     }
     public double getReturnTicketPrice(){
         return this.returnTicketPrice;
     } 
     public void setReturnTicketPrice(){
-        this.returnTicketPrice = returnTicketPrice;
+        
     }  
        
     
@@ -147,23 +147,22 @@ public class FlightBooking {
 
     public TripDestination getTripDestination(){
         return this.tripDestination;}
-   public void setTripDestination(String f){
-       if(f.equals("1")){
+   public void setTripDestination(String ff){
+       if(ff.equals("1")){
            this.tripDestination = TripDestination.NANJING;
        }
-       if(f.equals("2")){
+       if(ff.equals("2")){
            this.tripDestination = TripDestination.BEIJING;
        }
-       if(f.equals("3")){
+       if(ff.equals("3")){
            this.tripDestination = TripDestination.OULU;
        }
-       if(f.equals("4")){
+       if(ff.equals("4")){
            this.tripDestination = TripDestination.HELSINKI;
        }
    }
-   public void setTripDestination(TripSource tripSource,TripDestination tripDestination) {
-    this.tripDestination = tripDestination;
-}
+   
+
 
 
 public LocalDate getDepartureDate(){
@@ -195,66 +194,18 @@ public void setReturnDate(LocalDate returnDate){
 
 public String getTicketNumber(){
     return this.ticketNumber;}
-public void setTicketNumber(){
-    if (tripType.equals("1")){
-        this.ticketNumber = "11########";
-        if(bookingClass.equals("1")){
-            this.ticketNumber = "11F#######";
-        }
-        if(bookingClass.equals("2")){
-            this.ticketNumber = "11B#######";
-        }
-        if(bookingClass.equals("3")){
-            this.ticketNumber = "11E#######";
-        }
-    }
-    if (tripType.equals("2")){
-        this.ticketNumber = "22########";
-        if(bookingClass.equals("1")){
-            this.ticketNumber = "22F#######";
-        }
-        if(bookingClass.equals("2")){
-            this.ticketNumber = "22B#######";
-        }
-        if(bookingClass.equals("3")){
-            this.ticketNumber = "22E#######";
-        }
-    }
 
 
 
 
 
-    }
-    public double getTotalTicketPrice(){
+    
+public double getTotalTicketPrice(){
         return this.totalTicketPrice;}
-    public void setTotalTicketPrice(){
-        if(){
-            this.totalTicketPrice = 300 + 300*0.1 +300*0.05;
-            if(bookingClass.equals("1")){
-                this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 250;  
-            }
-            if(bookingClass.equals("2")){
-                this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 150;
+public void setTotalTicketPrice(double childPassengers, double adultPassengers){
+        
         }
-        if(bookingClass.equals("3")){
-            this.totalTicketPrice = (300 + 300*0.1 +300*0.05) + 50;
-    }  
-    }
-    if(){
-        this.totalTicketPrice = 300 + 300*0.15 +300*0.1;
-        if(bookingClass.equals("1")){
-            this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 250;  
-        }
-        if(bookingClass.equals("2")){
-            this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 150;
-    }
-    if(bookingClass.equals("3")){
-        this.totalTicketPrice = (300 + 300*0.15 +300*0.1) + 50;
-} 
-    }     
-  
-    }
+    
     
 }
 

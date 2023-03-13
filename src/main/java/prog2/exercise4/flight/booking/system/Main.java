@@ -111,14 +111,13 @@ public class Main
     Scanner k = new Scanner(System.in);
     System.out.println("票号是什么：");
     String ticketNumber = k.nextLine();
-    fb.setTicketNumber();
     fb.getTicketNumber();
 
     Scanner l = new Scanner(System.in);
     System.out.println("总票价为：");
     String totalTicketPrice = k.nextLine();
     fb.getTotalTicketPrice();
-    fb.setTotalTicketPrice();
+    
 
     
    
