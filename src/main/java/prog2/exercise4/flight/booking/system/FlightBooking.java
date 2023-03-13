@@ -145,7 +145,7 @@ public class FlightBooking {
     public TripDestination getTripDestination(String f){
         return this.tripDestination;
    }
-   public void setTripDestinations(String f){
+   public void setTripDestination(String f){
        if(f.equals("1")){
            this.tripDestination = TripDestination.NANJING;
        }
@@ -159,8 +159,7 @@ public class FlightBooking {
            this.tripDestination = TripDestination.HELSINKI;
        }
    }
-public void setTripDestination(String ff) {
-}
+
 
 public LocalDate getDepartureDate(){
     return this.departingDate;}
